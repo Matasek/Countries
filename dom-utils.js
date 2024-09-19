@@ -22,9 +22,7 @@ const createCountryItemElement = (country) => {
 
   countryElement.appendChild(countryNameElement);
 
-  countryElement.appendChild(
-    createInfoElement("Population", country.population)
-  );
+  countryElement.appendChild(createInfoElement("Population", country.population));
   countryElement.appendChild(createInfoElement("Region", country.region));
   countryElement.appendChild(createInfoElement("Capital", country.capital));
 
