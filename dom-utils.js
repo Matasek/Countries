@@ -22,7 +22,9 @@ const createCountryItemElement = (country) => {
 
   countryElement.appendChild(countryNameElement);
 
-  countryElement.appendChild(createInfoElement("Population", country.population));
+  countryElement.appendChild(
+    createInfoElement("Population", country.population)
+  );
   countryElement.appendChild(createInfoElement("Region", country.region));
   countryElement.appendChild(createInfoElement("Capital", country.capital));
 
@@ -46,8 +48,6 @@ const createFlagImgElement = (country) => {
   const imgContainerElement = document.createElement("div");
   const imgElement = document.createElement("img");
   imgElement.src = country.flagUrl;
-  imgElement.width = 160;
-  imgElement.height = 98;
   imgContainerElement.appendChild(imgElement);
 
   return imgContainerElement;
