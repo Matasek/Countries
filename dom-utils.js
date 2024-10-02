@@ -15,18 +15,26 @@ const createListElement = (countries) => {
 const createCountryItemElement = (country) => {
   const countryElement = document.createElement("li");
 
-  const countryNameElement = document.createElement("span");
-  countryNameElement.innerText = country.name;
-
   countryElement.appendChild(createFlagImgElement(country));
 
-  countryElement.appendChild(countryNameElement);
+  const infoContainerElement = document.createElement("div");
+  infoContainerElement.classList.add("info-container");
 
-  countryElement.appendChild(
+  const countryNameElement = document.createElement("strong");
+  countryNameElement.innerText = country.name;
+  countryNameElement.classList.add("country-name");
+
+  infoContainerElement.appendChild(countryNameElement);
+
+  infoContainerElement.appendChild(
     createInfoElement("Population", country.population)
   );
-  countryElement.appendChild(createInfoElement("Region", country.region));
-  countryElement.appendChild(createInfoElement("Capital", country.capital));
+  infoContainerElement.appendChild(createInfoElement("Region", country.region));
+  infoContainerElement.appendChild(
+    createInfoElement("Capital", country.capital)
+  );
+
+  countryElement.appendChild(infoContainerElement);
 
   return countryElement;
 };
