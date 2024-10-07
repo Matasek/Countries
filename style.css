@@ -55,3 +55,21 @@ li img {
   font-size: 18px;
   margin-bottom: 10px;
 }
+
+@media screen and (max-width: 1000px) {
+  ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  ul {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
