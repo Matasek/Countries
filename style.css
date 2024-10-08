@@ -56,7 +56,7 @@ li img {
   margin-bottom: 10px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
   ul {
     grid-template-columns: 1fr 1fr 1fr;
   }
